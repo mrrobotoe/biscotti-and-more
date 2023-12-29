@@ -1,0 +1,211 @@
+.header {
+  padding: var(--padding-sm);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-size: 94% auto;
+  background-position: center bottom -10rem;
+  background-repeat: no-repeat;
+  background-image: url('/assets//header-backdrop.png');
+
+  @media only screen and (max-width: 800px) {
+    background-position: center bottom -4rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    background-size: 150% auto;
+    background-position: center bottom -50px;
+  }
+  h1 {
+    font-size: var(--s5);
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+    color: var(--color-light);
+    padding-top: var(--s3);
+    padding-bottom: var(--s5);
+  }
+}
+
+.container {
+  padding: 0 var(--padding-sm);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: var(--padding-sm);
+
+  @media only screen and (max-width: 500px) {
+    padding: 0;
+    padding-bottom: var(--padding-sm);
+  }
+
+  .menu {
+    background-color: var(--color-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s3);
+    padding: var(--s2);
+
+    @media only screen and (max-width: 878px) {
+      grid-template-columns: 1fr;
+      padding: var(--s1);
+    }
+
+    .menu-column {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s1);
+    }
+  }
+
+  .menu-item-1 {
+    position: relative;
+    padding: 7%;
+    border: var(--border-width) dotted var(--color-accent);
+    box-shadow: inset 0 0 0 10px var(--color-light),
+      inset 0 0 0 11px var(--color-accent);
+    
+    margin-bottom: var(--s1);
+
+    .svg-biscotti {
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -30%);
+      width: var(--s5);
+      height: var(--s5);
+      max-width: 75px;
+      max-height: 75px;
+    }
+
+    .svg-madeleine {
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -40%);
+      width: var(--s5);
+      height: var(--s5);
+      height: 55px;
+    }
+
+    .svg-pie {
+      position: absolute;
+      left: 80%;
+      top: 0%;
+      transform: translate(-50%, -30%);
+      width: var(--s5);
+      height: var(--s5);
+      height: 60px;
+      width: 60px;
+    }
+
+    .svg-cina-roll {
+      position: absolute;
+      left: 20%;
+      top: 0%;
+      transform: translate(-50%, -30%);
+      width: var(--s5);
+      height: var(--s5);
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .menu-item-2 {
+    position: relative;
+    padding: 7%;
+
+    h3 {
+      padding-top: var(--s1);
+      font-size: var(--s1);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--color-accent);
+      text-align: center;
+      padding-bottom: var(--s-1);
+      margin-bottom: var(--s2);
+      border-bottom: var(--border-width) dotted var(--color-accent);
+    }
+
+    .svg-cookies {
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -40%);
+      max-width: 75px;
+      max-height: 75px;
+
+      @media only screen and (max-width: 500px) {
+        max-width: 70px;
+        max-height: 70px;
+      }
+    }
+
+    .svg-scones {
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -30%);
+      width: 90px;
+      height: 90px;
+
+      @media only screen and (max-width: 800px) {
+        max-width: 80px;
+        max-height: 80px;
+      }
+    }
+  }
+
+  h3 {
+    padding-top: var(--s1);
+    font-size: var(--s1);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-align: center;
+    padding-bottom: var(--s-1);
+    border-bottom: var(--border-width) dashed var(--color-accent);
+    margin-bottom: var(--s2);
+  }
+
+  .menu-list {
+    list-style: none;
+
+    .menu-item {
+      display: grid;
+      color: #333;
+      grid-template-columns: [menu-item] auto [price] auto;
+      grid-column-gap: 4rem;
+      &:not(:last-child) {
+        margin-bottom: var(--s0);
+      }
+
+      .name {
+        font-family: 'lora';
+        margin-bottom: var(--s-4);
+        font-weight: 600;
+        grid-column: menu-item;
+        font-size: var(--s0);
+        line-height: 1.2;
+      }
+
+      .price {
+        font-family: 'lora';
+        grid-column: price;
+        align-self: start;
+        justify-self: end;
+        font-style: normal;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: #444;
+
+        .quantity {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+            sans-serif;
+          font-size: 0.70em;
+          color: #555;
+        }
+      }
+    }
+  }
+}
