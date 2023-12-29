@@ -2,9 +2,10 @@
   width: 100%;
   background-color: var(--color-light);
   min-height: var(--nav-height);
-  display: flex;
+  display: grid;
   align-items: center;
   position: fixed;
+  grid-template-columns: repeat(2, max-content) repeat(12, 1fr);
   gap: 1px;
   left: 0;
   top: 0;
@@ -48,16 +49,10 @@
     }
   }
 
-
-  .nav-pages {
-    background-color: var(--color-accent);
-    display: flex;
-    align-items: center;
-    gap: 1em;
-
-    a {
-      color: var(--color-light);
-    }
+  .nav-facebook {
+    display: grid;
+    place-items: center;
+    grid-column: 14;
+    padding-right: var(--padding-sm);
   }
-
 }
